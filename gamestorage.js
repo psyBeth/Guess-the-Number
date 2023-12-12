@@ -6,7 +6,9 @@ let message = document.querySelector(".msg")
 
 let skor = 10;
 // could get the skore from html but we will use it a lot so...
-let highestSkor = 0;
+let highestSkor = localStorage.getItem("top-score") || 0;
+
+document.querySelector(".top-score").textContent = highestSkor
 
 //? everytime the check button is clicked these will happen:
 document.querySelector(".check").addEventListener("click", () => {
@@ -82,6 +84,3 @@ document.addEventListener("keydown", function(e) {
         document.querySelector(".check").click()
     }
 } )
-
-//when refreshed the top score won't change
-//preserve the top score in the database like the browser's storage etc
