@@ -49,4 +49,23 @@ document.querySelector(".check").addEventListener("click", () => {
 
     }
 
-})
+});
+
+// Let's get to the Again button
+
+document.querySelector(".again").onclick = () => {
+    document.querySelector("body").style. backgroundColor = "blue"
+
+    randomno = Math.ceil(Math.random()*20)
+    console.log(randomno);
+    skor = 10;
+    document.querySelector(".score").textContent = skor
+
+    document.querySelector(".number").textContent = "?"
+
+    document.querySelector(".guess").value = ""
+
+    message.textContent = "Starting over again..."
+
+}
+
