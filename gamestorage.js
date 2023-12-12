@@ -6,8 +6,11 @@ let message = document.querySelector(".msg")
 
 let skor = 10;
 // could get the skore from html but we will use it a lot so...
+
+//! if there's a variable named top-score on the local storage, bring it otherwise make it 0
 let highestSkor = localStorage.getItem("top-score") || 0;
 
+//! update the top score in the browser/DOM by reading it from local storage 
 document.querySelector(".top-score").textContent = highestSkor
 
 //? everytime the check button is clicked these will happen:
