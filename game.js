@@ -23,8 +23,14 @@ document.querySelector(".check").addEventListener("click", () => {
         document.querySelector(".number").textContent = randomno
 
         //top score control will come here
+        if (skor > highestSkor) {
+            highestSkor = skor
+            document.querySelector(".top-score").textContent= highestSkor
+        } 
+
     } else {
     //! if it's wrong
+    document.querySelector("body").style.backgroundColor = "red"
         
         //? score>1 means user can still make a guess
         if (skor > 1){
@@ -38,7 +44,7 @@ document.querySelector(".check").addEventListener("click", () => {
         } else{
             message.textContent = "You lost the game.💀"
             document.querySelector(".score").textContent = 0;
-            document.querySelector("body").style.backgroundColor = "red"
+            document.querySelector("body").style.backgroundColor = "black"
         }
 
     }
