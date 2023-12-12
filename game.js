@@ -30,7 +30,9 @@ document.querySelector(".check").addEventListener("click", () => {
         if (skor > 1){
             skor -- ;
             document.querySelector(".score").textContent = skor
-            
+
+            guessin < randomno ? message.textContent = "Increase 👆" 
+            : message.textContent = "Decrease 👇"
 
 
         } else{
