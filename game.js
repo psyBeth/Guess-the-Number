@@ -69,3 +69,12 @@ document.querySelector(".again").onclick = () => {
 
 }
 
+//! ENTER
+// when enter on the keyboard pressed, check button will be triggered
+
+document.addEventListener("keydown", function(e) {
+    if (e.key === "Enter"){
+        //click check when enter is pressed
+        document.querySelector(".click").click()
+    }
+} )
